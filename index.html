@@ -7,36 +7,53 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 20px;
-      text-align: center;
       background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-    h1 { font-size: 2em; }
-    h2 { color: #555; }
-    a.button {
+    .container {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.5em;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .buttons a {
       display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #007acc;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: #007acc;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
     }
-    a.button:hover {
-      background: #005f99;
+    .buttons a:hover {
+      background-color: #005fa3;
     }
   </style>
 </head>
 <body>
-  <h1>Emad Adel</h1>
-  <h2>Software Engineer</h2>
-  <p>
-    <a href="https://www.linkedin.com/in/emadadel" target="_blank">LinkedIn Profile</a>
-  </p>
-  <p>
-    <a class="button" href="cv.pdf" download>Download CV</a>
-  </p>
+  <div class="container">
+    <h1>Emad Adel</h1>
+    <h2>Software Engineer</h2>
+    <div class="buttons">
+      <a href="https://www.linkedin.com/in/emadadel" target="_blank">LinkedIn Profile</a>
+      <a href="cv.pdf" download>Download CV</a>
+    </div>
+  </div>
 </body>
 </html>
