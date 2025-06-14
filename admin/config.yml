@@ -1,20 +1,20 @@
 backend:
-  name: github
-  repo: Emad492/Emad-Adel-Ali.github.io
+  name: git-gateway
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
-  - name: "homepage"
-    label: "Homepage"
+  - name: "siteinfo"
+    label: "Site Info"
     files:
-      - label: "Home Content"
-        name: "home"
-        file: "index.html"
+      - file: "data/info.yml"
+        label: "Site Info"
+        name: "info"
         fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Job Title", name: "title", widget: "string" }
-          - { label: "LinkedIn", name: "linkedin", widget: "string" }
-          - { label: "CV Link", name: "cv", widget: "string" }
+          - { label: "Bio", name: "bio", widget: "text" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+          - { label: "CV File Path", name: "cv", widget: "string" }
