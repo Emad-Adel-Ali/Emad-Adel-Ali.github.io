@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-repo: emad-adel-ali/emad-adel-ali.github.io
+  name: github
+  repo: "emad-adel-ali/emad-adel-ali.github.io"
   branch: main
 
 media_folder: "assets/uploads"
@@ -14,8 +14,18 @@ collections:
         label: "Site Info"
         name: "info"
         fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Job Title", name: "title", widget: "string" }
-          - { label: "Bio", name: "bio", widget: "text" }
-          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
-          - { label: "CV File Path", name: "cv", widget: "string" }
+          - label: "Name"
+            name: "name"
+            widget: "string"
+          - label: "Job Title"
+            name: "title"
+            widget: "string"
+          - label: "Bio"
+            name: "bio"
+            widget: "text"
+          - label: "LinkedIn URL"
+            name: "linkedin"
+            widget: "string"
+          - label: "CV File Path"
+            name: "cv"
+            widget: "string"
