@@ -1,16 +1,29 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Content Manager</title>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-  </head>
-  <body>
-    <div id="nc-root"></div> <!-- ✅ Needed for CMS to mount -->
+
+    <!-- Tells Netlify CMS to wait for manual init -->
     <script>
       window.CMS_MANUAL_INIT = true;
-      window.addEventListener('DOMContentLoaded', function () {
-        CMS.init(); // ✅ Correct usage of CMS.init()
+    </script>
+
+    <!-- Load Netlify CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
+  </head>
+  <body>
+    <!-- CMS needs this root element -->
+    <div id="nc-root"></div>
+
+    <!-- Manually initialize CMS when everything is loaded -->
+    <script>
+      window.addEventListener('load', function () {
+        if (window.CMS) {
+          CMS.init();
+        } else {
+          console.error("CMS failed to load.");
+        }
       });
     </script>
   </body>
